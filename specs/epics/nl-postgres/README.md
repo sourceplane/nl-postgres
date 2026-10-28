@@ -8,7 +8,7 @@ that makes a copy of it somebody else's product in one landing.**
 
 | | |
 |---|---|
-| Status | In progress — NL0 on main |
+| Status | In progress — NL1 on main: the site runs on Workers |
 | Upstream | [vercel-labs/natural-language-postgres](https://github.com/vercel-labs/natural-language-postgres) (MIT), Vercel's [Natural Language Postgres](https://vercel.com/templates/next.js/natural-language-postgres), at `f5af6a2` |
 | Reference | [rag-chatbot](https://github.com/sourceplane/rag-chatbot) — an AI SDK app on Workers AI and Supabase through Hyperdrive, migrations, db-migrate, row-level security; [admin-dashboard](https://github.com/sourceplane/admin-dashboard) — the most recent Supabase port |
 | Key | `NL` |

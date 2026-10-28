@@ -1,0 +1,11 @@
+# Local Worker secrets for `wrangler dev` / `opennextjs-cloudflare preview`.
+# Copy to .dev.vars (git-ignored). Every key is optional: the database is not
+# here (the Worker reaches it through the HYPERDRIVE binding, wrangler.jsonc),
+# and neither is the model — Workers AI answers through the AI binding.
+#
+# OpenAI instead of Workers AI: set, the SQL is written, explained and charted
+# by upstream's own model, gpt-5.4-mini, straight from OpenAI. In stage/prod
+# this is a Worker secret the owner sets once per environment:
+# `wrangler secret put OPENAI_API_KEY --name nl-postgres-web-<env>`
+# (README, "Use OpenAI instead").
+# OPENAI_API_KEY=
