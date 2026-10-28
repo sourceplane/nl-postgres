@@ -1,0 +1,31 @@
+# The epic's declaration. metadata.name equals the directory name; metadata.key
+# is the task-key prefix this epic reserves (NL → NL-1, NL-2, …). Owner, target
+# date and health are the platform's — never written here.
+apiVersion: orun.io/v1
+kind: Epic
+metadata:
+  name: nl-postgres
+  key: NL
+spec:
+  title: "Vercel's Natural Language Postgres on Cloudflare Workers and Supabase"
+  summary: "Vercel's Natural Language Postgres — a question in plain English turned into SQL by a model, the SQL run against a table of unicorn companies, the rows charted and the query explained — run on Cloudflare Workers + Static Assets through @opennextjs/cloudflare, the SQL written by Workers AI through the Worker's AI binding and run as a read-only database role, its Postgres a Supabase project reached through Hyperdrive, both provisioned by Terraform; the table, sixty fictional sample companies and the read-only role applied by db-migrate; and become an Orun baseline that takes a new product from nothing to live on stage and prod in one landing."
+  state: started
+  milestones:
+    - name: "NL0 — the spec"
+      exitCriteria:
+        - "the repository is born with its intent, CI, tooling and spec index, and this doc set and the task contracts are on main"
+      tasks: [NL-1]
+    - name: "NL1 — the app on Workers and Supabase"
+      exitCriteria:
+        - "apps/web is the template on Next.js 16.3.8, built by OpenNext into one Worker, its Postgres the HYPERDRIVE binding with a client per call"
+        - "the model is Workers AI through the AI binding, or OpenAI's gpt-5.4-mini once OPENAI_API_KEY is set — never a gateway"
+        - "the model's SQL runs only through app_private.run_read_only, as query_reader, in a read-only transaction under a statement timeout, behind the template's own check"
+        - "the table, the sample companies, row-level security and the read-only role are packages/db migrations, applied by db-migrate; the Supabase and Hyperdrive roots provision stage and prod"
+        - "`pnpm typecheck`, `pnpm lint`, `pnpm test` and `pnpm build` are green"
+      tasks: [NL-2]
+    - name: "NL2 — a baseline"
+      exitCriteria:
+        - "blueprint.yaml (the console card) and repo-blueprint.yaml (the build) take a new product from nothing to live on stage and prod in one landing, then record it"
+        - "a product built from it carries the product only, renamed throughout to its own name, repository, Worker, Supabase project and Hyperdrive config"
+        - "Baseline CI is green: contract tests, generated component docs, the blueprint read by the pinned orun, the leak gate, the offline bootstrap and the end-to-end tier"
+      tasks: [NL-3]
