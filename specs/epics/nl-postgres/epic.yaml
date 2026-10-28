@@ -9,7 +9,7 @@ metadata:
 spec:
   title: "Vercel's Natural Language Postgres on Cloudflare Workers and Supabase"
   summary: "Vercel's Natural Language Postgres — a question in plain English turned into SQL by a model, the SQL run against a table of unicorn companies, the rows charted and the query explained — run on Cloudflare Workers + Static Assets through @opennextjs/cloudflare, the SQL written by Workers AI through the Worker's AI binding and run as a read-only database role, its Postgres a Supabase project reached through Hyperdrive, both provisioned by Terraform; the table, sixty fictional sample companies and the read-only role applied by db-migrate; and become an Orun baseline that takes a new product from nothing to live on stage and prod in one landing."
-  state: started
+  state: completed
   milestones:
     - name: "NL0 — the spec"
       exitCriteria:

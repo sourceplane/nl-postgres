@@ -4,7 +4,7 @@
 |---|---|---|
 | NL0 — the spec | ✅ | NL-1 |
 | NL1 — the app on Workers and Supabase | ✅ | NL-2 |
-| NL2 — a baseline | planned | NL-3 |
+| NL2 — a baseline | ✅ | NL-3, tagged `baseline-v1` |
 
 ## Departures from the upstream template
 
