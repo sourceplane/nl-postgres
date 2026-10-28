@@ -1,0 +1,23 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: NL-2
+  title: "The app on Workers and Supabase"
+spec:
+  goal: Vercel's Natural Language Postgres runs as one Cloudflare Worker, its SQL written by Workers AI and run as a read-only role against a Supabase project's Postgres behind Hyperdrive, the schema and sample data applied by db-migrate
+  affects:
+    - apps/web
+    - packages/db
+    - infra/terraform/supabase
+    - infra/terraform/cloudflare-hyperdrive
+    - infra/db-migrate
+    - tests/web
+    - tests/db
+    - tooling/migrations
+  doneWhen:
+    - the template's page and four server actions run on OpenNext, the database reached through the HYPERDRIVE binding with a client per call
+    - the model is Workers AI through the AI binding by default and OpenAI's gpt-5.4-mini once OPENAI_API_KEY is set; no gateway model string remains
+    - the model's SQL runs only as query_reader through app_private.run_read_only, read only, under a statement timeout, and the database refuses every write, DDL, other schema and step back up to the connection's role
+    - the table, sixty fictional sample companies, row-level security and the read-only role are packages/db migrations; tooling/migrations/csv-to-sql.mjs turns CB Insights' CSV into one more
+    - pnpm typecheck, lint, test and build are green
+  gates: []
