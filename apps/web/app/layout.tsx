@@ -8,7 +8,7 @@ export const metadata = {
   metadataBase: siteUrl(),
   title: SITE_NAME,
   description:
-    "Chat with a Postgres database using natural language powered by the AI SDK by Vercel.",
+    "Chat with a Postgres database using natural language powered by the AI SDK.",
 };
 
 export default function RootLayout({
